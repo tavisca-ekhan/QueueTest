@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String args[]) {
-        Queue queue = new Queue(8);
+        Queue queue = new Queue(10);
         int[] data = {1, 2, 3, 4, 5, 6};
         int[] secondData = {7, 8 , 9};
 

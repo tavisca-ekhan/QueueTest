@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 public class Queue {
+    ArrayList<Integer> queue;
     private int capacity;
-    private ArrayList<Integer> queue;
+    private static final int defaultCapacity = 8;
     private int front;
     private int rear;
 
@@ -12,11 +13,7 @@ public class Queue {
         front = rear = -1;
     }
 
-    Queue() {
-        this.capacity = 10;
-        queue = new ArrayList<>(this.capacity);
-        front = rear = -1;
-    }
+    Queue() { this(defaultCapacity); }
 
     void add(int data) throws OverflowException {
         if ((rear + 1) % this.capacity == front)
